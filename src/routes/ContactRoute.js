@@ -9,11 +9,8 @@ router.post( '/contact', (req, res) => {
     
     const contactEmail = nodemailer.createTransport({
       host: 'smtp.gmail.com',
-      port: 587,
-      secure: false,
-      requireTLS: true,
       auth: {
-        user: "web.kamaldeep@gmail.com",
+        user: "api.mernstack@gmail.com",
         pass: "Kamal@786",
       },
     });
@@ -25,8 +22,8 @@ router.post( '/contact', (req, res) => {
     });
 
     const mail = {
-        from: 'web.kamaldeep@gmail.com',
-        to: "web.kamaldeep@gmail.com",
+        from: 'api.mernstack@gmail.com',
+        to: "api.mernstack@gmail.com",
         subject: "Contact Form Submission",
         html: `<p>Name: ${userData.fullname}</p>
                <p>Phone: ${userData.phone}</p>
